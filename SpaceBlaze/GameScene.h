@@ -10,4 +10,12 @@
 
 @interface GameScene : SKScene
 
+@property (strong, nonatomic) SKNode *player;
+
+@end
+
+@interface SKEmitterNode (fromFile)
+
++(instancetype)ball_emitterNamed:(NSString*)name;
+
 @end

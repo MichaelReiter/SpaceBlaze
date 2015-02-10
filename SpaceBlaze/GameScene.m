@@ -3,22 +3,27 @@
 //  SpaceBlaze
 //
 //  Created by Michael Reiter on 2015-02-09.
-//  Copyright (c) 2015 Michael Reiter. All rights reserved.
 //
 
 #import "GameScene.h"
 #import "CGVector+TC.h"
+#import "MenuScene.h"
 
 enum {
-    CollisionPlayer = 1<<1,
-    CollisionEnemy = 1<<2
+    CollisionPlayer = 1 << 1,
+    CollisionEnemy = 1 << 2
 };
+
+@interface GameScene () <SKPhysicsContactDelegate>
+@end
 
 @implementation GameScene
 
 {
     SKNode *_player;
     NSMutableArray *_enemies;
+    BOOL _dead;
+    SKLabelNode *_scoreLabel;
 }
 
 -(id)initWithSize:(CGSize)size
@@ -28,6 +33,7 @@ enum {
         self.backgroundColor = [SKColor blackColor];
         
         self.physicsWorld.gravity = CGVectorMake(0, 0);
+        self.physicsWorld.contactDelegate = self;
         
         _enemies = [NSMutableArray new];
         
@@ -41,6 +47,12 @@ enum {
         SKEmitterNode *trail = [SKEmitterNode ball_emitterNamed:@"BlazeParticle"];
         trail.position = CGPointMake(CGRectGetMidX(circle.frame), CGRectGetMidY(circle.frame));
         trail.targetNode = self;
+        
+        _player.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:10];
+        _player.physicsBody.mass = 100000;
+        _player.physicsBody.categoryBitMask = CollisionPlayer;
+        _player.physicsBody.contactTestBitMask = CollisionEnemy;
+        
         [_player addChild:trail];
         
         _player.position = CGPointMake(size.width/2, size.height/2);
@@ -73,13 +85,25 @@ enum {
     
     [enemy addChild:enemyTrail];
     
-    //enemy.physicsBody.categoryBitMask = CollisionEnemy;
+    enemy.physicsBody.categoryBitMask = CollisionEnemy;
     enemy.physicsBody.allowsRotation = NO;
     enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:6];
     enemy.position = CGPointMake(50, 50);
     
     [_enemies addObject:enemy];
     [self addChild:enemy];
+    
+    if (!_scoreLabel) {
+        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Neue"];
+        
+        _scoreLabel.fontSize = 25;
+        _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 100);
+        _scoreLabel.fontColor = [SKColor whiteColor];
+        
+        [self addChild:_scoreLabel];
+    }
+    
+    _scoreLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)_enemies.count];
     
     [self runAction:[SKAction sequence:@[
         [SKAction waitForDuration:5],
@@ -100,6 +124,43 @@ enum {
         
         [enemyNode.physicsBody applyForce:force];
     }
+}
+
+-(void)didBeginContact:(SKPhysicsContact *)contact
+{
+    if (_dead) {
+        return;
+    }
+    
+    [self dieFrom:contact.bodyB.node];
+    contact.bodyB.node.physicsBody = nil;
+}
+
+-(void)dieFrom:(SKNode*)killingEnemy
+{
+    _dead = YES;
+    
+    SKEmitterNode *explosion = [SKEmitterNode ball_emitterNamed:@"Explosion"];
+    explosion.position = _player.position;
+    [self addChild:explosion];
+    
+    [explosion runAction:[SKAction sequence:@[
+        [SKAction waitForDuration:0.2],
+        [SKAction runBlock:^{
+            [killingEnemy removeFromParent];
+            [_player removeFromParent];
+        }],
+        [SKAction waitForDuration:0.2],
+        [SKAction runBlock:^{
+            explosion.particleBirthRate = 0;
+        }],
+        [SKAction waitForDuration:1.2],
+        
+        [SKAction runBlock:^{
+        MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
+        [self.view presentScene:menu transition:[SKTransition crossFadeWithDuration:0.5]];
+        }]
+        ]]];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

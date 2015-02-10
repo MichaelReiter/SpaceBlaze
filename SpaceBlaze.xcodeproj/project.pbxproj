@@ -17,6 +17,10 @@
 		4C1193621A89C34D0009DDD3 /* SpaceBlazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */; };
 		4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */; };
 		4C11936E1A89CEC50009DDD3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C11936C1A89CEC50009DDD3 /* spark.png */; };
+		4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D741A8AA5F900FEE1EE /* Explosion.sks */; };
+		4C797D771A8AA5F900FEE1EE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D751A8AA5F900FEE1EE /* spark.png */; };
+		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
+		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,11 @@
 		4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceBlazeTests.m; sourceTree = "<group>"; };
 		4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BlazeParticle.sks; path = ../BlazeParticle.sks; sourceTree = "<group>"; };
 		4C11936C1A89CEC50009DDD3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		4C797D741A8AA5F900FEE1EE /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		4C797D751A8AA5F900FEE1EE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		4C797D781A8AAF8800FEE1EE /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,16 +98,9 @@
 		4C11933F1A89C34C0009DDD3 /* SpaceBlaze */ = {
 			isa = PBXGroup;
 			children = (
-				4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */,
-				4C11936C1A89CEC50009DDD3 /* spark.png */,
-				4C1193441A89C34C0009DDD3 /* AppDelegate.h */,
-				4C1193451A89C34C0009DDD3 /* AppDelegate.m */,
-				4C1193471A89C34C0009DDD3 /* GameScene.h */,
-				4C1193481A89C34C0009DDD3 /* GameScene.m */,
-				4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */,
-				4C11934C1A89C34C0009DDD3 /* GameViewController.h */,
-				4C11934D1A89C34C0009DDD3 /* GameViewController.m */,
-				4C11934F1A89C34C0009DDD3 /* Main.storyboard */,
+				4C797D7F1A8AB03000FEE1EE /* Particles */,
+				4C797D7E1A8AB00700FEE1EE /* Other source files */,
+				4C797D7D1A8AAFED00FEE1EE /* Scenes */,
 				4C1193521A89C34C0009DDD3 /* Images.xcassets */,
 				4C1193541A89C34C0009DDD3 /* LaunchScreen.xib */,
 				4C1193401A89C34C0009DDD3 /* Supporting Files */,
@@ -130,6 +132,42 @@
 				4C1193601A89C34D0009DDD3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C797D7D1A8AAFED00FEE1EE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4C1193471A89C34C0009DDD3 /* GameScene.h */,
+				4C1193481A89C34C0009DDD3 /* GameScene.m */,
+				4C797D781A8AAF8800FEE1EE /* MenuScene.sks */,
+				4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */,
+				4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		4C797D7E1A8AB00700FEE1EE /* Other source files */ = {
+			isa = PBXGroup;
+			children = (
+				4C1193441A89C34C0009DDD3 /* AppDelegate.h */,
+				4C1193451A89C34C0009DDD3 /* AppDelegate.m */,
+				4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */,
+				4C11934F1A89C34C0009DDD3 /* Main.storyboard */,
+				4C11934C1A89C34C0009DDD3 /* GameViewController.h */,
+				4C11934D1A89C34C0009DDD3 /* GameViewController.m */,
+			);
+			name = "Other source files";
+			sourceTree = "<group>";
+		};
+		4C797D7F1A8AB03000FEE1EE /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */,
+				4C11936C1A89CEC50009DDD3 /* spark.png */,
+				4C797D751A8AA5F900FEE1EE /* spark.png */,
+				4C797D741A8AA5F900FEE1EE /* Explosion.sks */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,10 +252,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C11936E1A89CEC50009DDD3 /* spark.png in Resources */,
+				4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */,
 				4C1193561A89C34C0009DDD3 /* LaunchScreen.xib in Resources */,
+				4C797D771A8AA5F900FEE1EE /* spark.png in Resources */,
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
 				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
+				4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C11934E1A89C34C0009DDD3 /* GameViewController.m in Sources */,
+				4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */,
 				4C1193461A89C34C0009DDD3 /* AppDelegate.m in Sources */,
 				4C1193491A89C34C0009DDD3 /* GameScene.m in Sources */,
 				4C1193431A89C34C0009DDD3 /* main.m in Sources */,

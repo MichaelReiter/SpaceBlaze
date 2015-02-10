@@ -47,6 +47,7 @@
 		4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceBlazeTests.m; sourceTree = "<group>"; };
 		4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BlazeParticle.sks; path = ../BlazeParticle.sks; sourceTree = "<group>"; };
 		4C11936C1A89CEC50009DDD3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				4C1193451A89C34C0009DDD3 /* AppDelegate.m */,
 				4C1193471A89C34C0009DDD3 /* GameScene.h */,
 				4C1193481A89C34C0009DDD3 /* GameScene.m */,
+				4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */,
 				4C11934C1A89C34C0009DDD3 /* GameViewController.h */,
 				4C11934D1A89C34C0009DDD3 /* GameViewController.m */,
 				4C11934F1A89C34C0009DDD3 /* Main.storyboard */,
@@ -431,6 +433,7 @@
 				4C1193671A89C34D0009DDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C1193681A89C34D0009DDD3 /* Build configuration list for PBXNativeTarget "SpaceBlazeTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +442,7 @@
 				4C11936A1A89C34D0009DDD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

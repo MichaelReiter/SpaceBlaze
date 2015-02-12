@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D2CFA1A8C4D00001DB954 /* enemyParticle.sks */; };
 		4C1193431A89C34C0009DDD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193421A89C34C0009DDD3 /* main.m */; };
 		4C1193461A89C34C0009DDD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193451A89C34C0009DDD3 /* AppDelegate.m */; };
 		4C1193491A89C34C0009DDD3 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193481A89C34C0009DDD3 /* GameScene.m */; };
@@ -21,6 +22,7 @@
 		4C797D771A8AA5F900FEE1EE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D751A8AA5F900FEE1EE /* spark.png */; };
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
+		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0D2CFA1A8C4D00001DB954 /* enemyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = enemyParticle.sks; sourceTree = "<group>"; };
 		4C11933D1A89C34C0009DDD3 /* SpaceBlaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceBlaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1193411A89C34C0009DDD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C1193421A89C34C0009DDD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -57,6 +60,8 @@
 		4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
+		4CADDB4E1A8AC7AA00CDF812 /* InstructionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsScene.h; sourceTree = "<group>"; };
+		4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,8 @@
 				4C797D781A8AAF8800FEE1EE /* MenuScene.sks */,
 				4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */,
 				4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */,
+				4CADDB4E1A8AC7AA00CDF812 /* InstructionsScene.h */,
+				4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 		4C797D7F1A8AB03000FEE1EE /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				4C0D2CFA1A8C4D00001DB954 /* enemyParticle.sks */,
 				4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */,
 				4C11936C1A89CEC50009DDD3 /* spark.png */,
 				4C797D751A8AA5F900FEE1EE /* spark.png */,
@@ -258,6 +266,7 @@
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
 				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
+				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
 				4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +288,7 @@
 				4C11934E1A89C34C0009DDD3 /* GameViewController.m in Sources */,
 				4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */,
 				4C1193461A89C34C0009DDD3 /* AppDelegate.m in Sources */,
+				4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */,
 				4C1193491A89C34C0009DDD3 /* GameScene.m in Sources */,
 				4C1193431A89C34C0009DDD3 /* main.m in Sources */,
 			);

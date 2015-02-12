@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) SKNode *player;
 
+-(void)saveHighScoreWithScore:(NSInteger)score;
+
 @end
 
 @interface SKEmitterNode (fromFile)

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MenuScene.h"
 
 @interface AppDelegate ()
 
@@ -39,7 +40,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    //[[[MenuScene alloc] init] saveHighScoreWithScore:0];
 }
 
 @end

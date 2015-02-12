@@ -52,9 +52,7 @@ enum {
         _player.physicsBody.mass = 100000;
         _player.physicsBody.categoryBitMask = CollisionPlayer;
         _player.physicsBody.contactTestBitMask = CollisionEnemy;
-        
         [_player addChild:trail];
-        
         _player.position = CGPointMake(size.width/2, size.height/2);
         
         [self addChild:_player];
@@ -64,51 +62,45 @@ enum {
 
 -(void)didMoveToView:(SKView *)view
 {
-    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:1.0];
+    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:0.5];
 }
 
 -(void)spawnEnemy
 {
-    SKNode *enemy = [SKNode node];
     
-    SKEmitterNode *enemyTrail = [SKEmitterNode ball_emitterNamed:@"BlazeParticle"];
-    enemyTrail.targetNode = self;
-    enemyTrail.particleScale /= 2;
-    enemyTrail.position = CGPointMake(10, 10);
-    
-    enemyTrail.particleColorSequence = [[SKKeyframeSequence alloc]
-        initWithKeyframeValues:@[
-        [SKColor blueColor],
-        [SKColor colorWithHue:0.5 saturation:0.5 brightness:1 alpha:1],
-        [SKColor blueColor]]
-        times:@[@0, @0.05, @0.2]];
-    
-    [enemy addChild:enemyTrail];
-    
-    enemy.physicsBody.categoryBitMask = CollisionEnemy;
-    enemy.physicsBody.allowsRotation = NO;
-    enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:6];
-    enemy.position = CGPointMake(50, 50);
-    
-    [_enemies addObject:enemy];
-    [self addChild:enemy];
-    
-    if (!_scoreLabel) {
-        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Neue"];
+        SKNode *enemy = [SKNode node];
         
-        _scoreLabel.fontSize = 25;
-        _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame) + 100);
-        _scoreLabel.fontColor = [SKColor whiteColor];
+        SKEmitterNode *enemyTrail = [SKEmitterNode ball_emitterNamed:@"enemyParticle"];
+        enemyTrail.targetNode = self;
+        enemyTrail.position = CGPointMake(10, 10);
+
         
-        [self addChild:_scoreLabel];
-    }
+        [enemy addChild:enemyTrail];
+        
+        enemy.physicsBody.categoryBitMask = CollisionEnemy;
+        enemy.physicsBody.allowsRotation = NO;
+        enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:6];
+        enemy.position = CGPointMake(50, 50);
+        
+        [_enemies addObject:enemy];
+        [self addChild:enemy];
+        
+        if (!_scoreLabel) {
+            _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Neue"];
+            _scoreLabel.fontSize = 25;
+            _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height*0.9);
+            _scoreLabel.fontColor = [SKColor whiteColor];
+            
+            [self addChild:_scoreLabel];
+        }
+        
+        _scoreLabel.text = [NSString stringWithFormat:@"Score: %lu", (unsigned long)_enemies.count];
+        
+        [self runAction:[SKAction sequence:@[
+            [SKAction waitForDuration:5],
+            [SKAction performSelector:@selector(spawnEnemy) onTarget:self]
+            ]]];
     
-    _scoreLabel.text = [NSString stringWithFormat:@"%02lu", (unsigned long)_enemies.count];
-    
-    [self runAction:[SKAction sequence:@[
-        [SKAction waitForDuration:5],
-        [SKAction performSelector:@selector(spawnEnemy) onTarget:self]
-        ]]];
 }
 
 -(void)update:(NSTimeInterval)currentTime
@@ -157,10 +149,19 @@ enum {
         [SKAction waitForDuration:1.2],
         
         [SKAction runBlock:^{
+        [self saveHighScoreWithScore:(int)_enemies.count];
         MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
         [self.view presentScene:menu transition:[SKTransition crossFadeWithDuration:0.5]];
         }]
-        ]]];
+    ]]];
+}
+
+-(void)saveHighScoreWithScore:(NSInteger)score
+{
+    if (score > [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
+        [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"highScore"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

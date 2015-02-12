@@ -1,5 +1,5 @@
 //
-//  MenuScene.h
+//  InstructionsScene.h
 //  SpaceBlaze
 //
 //  Created by Michael Reiter on 2015-02-10.
@@ -8,12 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MenuScene : SKScene
-
-@property NSInteger highScore;
-
--(void)startGame;
-
--(void)viewInstructions;
+@interface InstructionsScene : SKScene
 
 @end

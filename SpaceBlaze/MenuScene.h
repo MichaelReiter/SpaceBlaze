@@ -12,8 +12,8 @@
 
 @property NSInteger highScore;
 
--(void)startGame;
+- (void)startGame;
 
--(void)viewInstructions;
+- (void)viewInstructions;
 
 @end

@@ -13,7 +13,7 @@
 
 @implementation MenuScene
 
--(instancetype)initWithSize:(CGSize)size
+- (instancetype)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
         
@@ -52,6 +52,7 @@
         playButton.fontSize = 30;
         playButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.3);
         playButton.fontColor = [SKColor whiteColor];
+        playButton.name = @"playButton";
         [self addChild:playButton];
         //TODO: tap the play button to start a new game
         
@@ -60,6 +61,7 @@
         instructionsButton.fontSize = 30;
         instructionsButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.2);
         instructionsButton.fontColor = [SKColor whiteColor];
+        instructionsButton.name = @"instructionsButton";
         [self addChild:instructionsButton];
         //TODO: tap the instructions button to see the instructions scene
         
@@ -67,18 +69,26 @@
     return self;
 }
 
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self startGame];
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInNode:self];
+    SKNode *touchNode = [self nodeAtPoint:touchLocation];
+    
+    if ([touchNode.name isEqualToString:@"playButton"]) {
+        [self startGame];
+    } else if ([touchNode.name isEqualToString:@"instructionsButton"]) {
+        [self viewInstructions];
+    }
 }
 
--(void)startGame
+- (void)startGame
 {
     GameScene *newGame = [[GameScene alloc] initWithSize:self.size];
     [self.view presentScene:newGame transition:[SKTransition moveInWithDirection:SKTransitionDirectionDown duration:0.5]];
 }
 
--(void)viewInstructions
+- (void)viewInstructions
 {
     InstructionsScene *instructionsScene = [[InstructionsScene alloc] initWithSize:self.size];
     [self.view presentScene:instructionsScene transition:[SKTransition moveInWithDirection:SKTransitionDirectionRight duration:0.5]];

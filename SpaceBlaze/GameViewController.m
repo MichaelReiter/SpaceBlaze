@@ -9,7 +9,6 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 #import "MenuScene.h"
-#import "InstructionsScene.h"       //DELETE THIS AFTER FINISHED IMPLEMENTING INSTRUCTIONS
 
 @implementation GameViewController
 
@@ -28,16 +27,11 @@
     skView.ignoresSiblingOrder = YES;
     
     // Create and configure the scene.
-    InstructionsScene *scene = [InstructionsScene sceneWithSize:skView.bounds.size];
+    MenuScene *scene = [MenuScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
     [skView presentScene:scene];
-}
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
 }
 
 - (NSUInteger)supportedInterfaceOrientations

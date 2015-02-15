@@ -27,7 +27,7 @@ enum {
     
 }
 
--(id)initWithSize:(CGSize)size
+- (id)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
         
@@ -63,12 +63,12 @@ enum {
     return self;
 }
 
--(void)didMoveToView:(SKView *)view
+- (void)didMoveToView:(SKView *)view
 {
     [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:1];
 }
 
--(void)spawnEnemy
+- (void)spawnEnemy
 {
     if (!_dead) {
         SKNode *enemy = [SKNode node];
@@ -98,7 +98,7 @@ enum {
     }
 }
 
--(void)updateScore
+- (void)updateScore
 {
     if (!_scoreLabel) {
         _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
@@ -111,7 +111,7 @@ enum {
     _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", (int)_enemies.count];
 }
 
--(void)update:(NSTimeInterval)currentTime
+- (void)update:(NSTimeInterval)currentTime
 {
     CGPoint playerPosition = _player.position;
     
@@ -126,7 +126,7 @@ enum {
     }
 }
 
--(void)didBeginContact:(SKPhysicsContact *)contact
+- (void)didBeginContact:(SKPhysicsContact *)contact
 {
     if (_dead) {
         return;
@@ -136,7 +136,7 @@ enum {
     contact.bodyB.node.physicsBody = nil;
 }
 
--(void)dieFrom:(SKNode*)killingEnemy
+- (void)dieFrom:(SKNode*)killingEnemy
 {
     _dead = YES;
     
@@ -164,7 +164,7 @@ enum {
     ]]];
 }
 
--(void)saveHighScoreWithScore:(NSInteger)score
+- (void)saveHighScoreWithScore:(NSInteger)score
 {
     if (score > [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
         [[NSUserDefaults standardUserDefaults] setInteger:score forKey:@"highScore"];
@@ -172,11 +172,11 @@ enum {
     }
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [self touchesMoved:touches withEvent:event];
 }
 
--(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [_player runAction:[SKAction moveTo:[[touches anyObject] locationInNode:self] duration:0.1]];
 }

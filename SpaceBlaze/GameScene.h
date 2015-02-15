@@ -12,12 +12,12 @@
 
 @property (strong, nonatomic) SKNode *player;
 
--(void)saveHighScoreWithScore:(NSInteger)score;
+- (void)saveHighScoreWithScore:(NSInteger)score;
 
 @end
 
 @interface SKEmitterNode (fromFile)
 
-+(instancetype)ball_emitterNamed:(NSString*)name;
++ (instancetype)ball_emitterNamed:(NSString*)name;
 
 @end

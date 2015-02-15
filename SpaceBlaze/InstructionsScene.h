@@ -10,4 +10,6 @@
 
 @interface InstructionsScene : SKScene
 
+-(void)backToMenu;
+
 @end

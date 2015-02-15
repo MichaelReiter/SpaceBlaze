@@ -24,6 +24,7 @@ enum {
     NSMutableArray *_enemies;
     BOOL _dead;
     SKLabelNode *_scoreLabel;
+    
 }
 
 -(id)initWithSize:(CGSize)size
@@ -56,24 +57,27 @@ enum {
         _player.position = CGPointMake(size.width/2, size.height/2);
         
         [self addChild:_player];
+        
+        [self updateScore];
     }
     return self;
 }
 
 -(void)didMoveToView:(SKView *)view
 {
-    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:1];
 }
 
 -(void)spawnEnemy
 {
-    
+    if (!_dead) {
         SKNode *enemy = [SKNode node];
         
         SKEmitterNode *enemyTrail = [SKEmitterNode ball_emitterNamed:@"enemyParticle"];
         enemyTrail.targetNode = self;
+    
+        //TODO: Randomize position
         enemyTrail.position = CGPointMake(10, 10);
-
         
         [enemy addChild:enemyTrail];
         
@@ -85,22 +89,26 @@ enum {
         [_enemies addObject:enemy];
         [self addChild:enemy];
         
-        if (!_scoreLabel) {
-            _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Helvetica-Neue"];
-            _scoreLabel.fontSize = 25;
-            _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height*0.9);
-            _scoreLabel.fontColor = [SKColor whiteColor];
-            
-            [self addChild:_scoreLabel];
-        }
-        
-        _scoreLabel.text = [NSString stringWithFormat:@"Score: %lu", (unsigned long)_enemies.count];
-        
+        [self updateScore];
+
         [self runAction:[SKAction sequence:@[
             [SKAction waitForDuration:5],
             [SKAction performSelector:@selector(spawnEnemy) onTarget:self]
             ]]];
-    
+    }
+}
+
+-(void)updateScore
+{
+    if (!_scoreLabel) {
+        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        _scoreLabel.fontSize = 25;
+        _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.9);
+        _scoreLabel.fontColor = [SKColor whiteColor];
+        _scoreLabel.text = @"Score: 0";
+        [self addChild:_scoreLabel];
+    }
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", (int)_enemies.count];
 }
 
 -(void)update:(NSTimeInterval)currentTime
@@ -151,7 +159,7 @@ enum {
         [SKAction runBlock:^{
         [self saveHighScoreWithScore:(int)_enemies.count];
         MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
-        [self.view presentScene:menu transition:[SKTransition crossFadeWithDuration:0.5]];
+        [self.view presentScene:menu transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:0.5]];
         }]
     ]]];
 }

@@ -40,7 +40,7 @@
         highScoreLabel.fontColor = [SKColor whiteColor];
         [self addChild:highScoreLabel];
         
-        SKLabelNode *title = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext-Bold"];
+        SKLabelNode *title = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
         title.text = @"Space Blaze";
         title.fontSize = 50;
         title.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.6);
@@ -53,7 +53,7 @@
         playButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.3);
         playButton.fontColor = [SKColor whiteColor];
         [self addChild:playButton];
-        //tap the play button to start a new game
+        //TODO: tap the play button to start a new game
         
         SKLabelNode *instructionsButton = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
         instructionsButton.text = @"Instructions";
@@ -61,7 +61,7 @@
         instructionsButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.2);
         instructionsButton.fontColor = [SKColor whiteColor];
         [self addChild:instructionsButton];
-        //tap the instructions button to see the instructions scene
+        //TODO: tap the instructions button to see the instructions scene
         
     }
     return self;
@@ -75,13 +75,13 @@
 -(void)startGame
 {
     GameScene *newGame = [[GameScene alloc] initWithSize:self.size];
-    [self.view presentScene:newGame transition:[SKTransition crossFadeWithDuration:0.5]];
+    [self.view presentScene:newGame transition:[SKTransition moveInWithDirection:SKTransitionDirectionDown duration:0.5]];
 }
 
 -(void)viewInstructions
 {
     InstructionsScene *instructionsScene = [[InstructionsScene alloc] initWithSize:self.size];
-    [self.view presentScene:instructionsScene transition:[SKTransition crossFadeWithDuration:0.5]];
+    [self.view presentScene:instructionsScene transition:[SKTransition moveInWithDirection:SKTransitionDirectionRight duration:0.5]];
 }
 
 @end

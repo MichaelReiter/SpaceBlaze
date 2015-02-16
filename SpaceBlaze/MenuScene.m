@@ -17,7 +17,9 @@
 {
     if (self = [super initWithSize:size]) {
         
-        if ([[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"] == 0) {
+        
+        //TODO: fix high score saving
+        if (![[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
             NSLog(@"init hs to 0");
             [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"highScore"];
             [[NSUserDefaults standardUserDefaults] synchronize];

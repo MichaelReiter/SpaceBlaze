@@ -30,7 +30,6 @@ enum {
 - (id)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
-        
         self.backgroundColor = [SKColor blackColor];
         
         self.physicsWorld.gravity = CGVectorMake(0, 0);
@@ -55,7 +54,6 @@ enum {
         _player.physicsBody.contactTestBitMask = CollisionEnemy;
         [_player addChild:trail];
         _player.position = CGPointMake(size.width/2, size.height/2);
-        
         [self addChild:_player];
         
         [self updateScore];
@@ -75,20 +73,16 @@ enum {
         
         SKEmitterNode *enemyTrail = [SKEmitterNode ball_emitterNamed:@"enemyParticle"];
         enemyTrail.targetNode = self;
-    
-        //TODO: Randomize position
         enemyTrail.position = CGPointMake(10, 10);
         
         [enemy addChild:enemyTrail];
-        
         enemy.physicsBody.categoryBitMask = CollisionEnemy;
         enemy.physicsBody.allowsRotation = NO;
         enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:6];
-        enemy.position = CGPointMake(50, 50);
+        enemy.position = CGPointMake(arc4random_uniform(self.frame.size.width), arc4random_uniform(self.frame.size.height));
         
         [_enemies addObject:enemy];
         [self addChild:enemy];
-        
         [self updateScore];
 
         [self runAction:[SKAction sequence:@[

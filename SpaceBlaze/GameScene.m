@@ -57,6 +57,11 @@ enum {
         [self addChild:_player];
         
         [self updateScore];
+        
+        SKEmitterNode *background = [SKEmitterNode ball_emitterNamed:@"star"];
+        background.particlePositionRange = CGVectorMake(self.size.width*2, self.size.height*2);
+        [background advanceSimulationTime:100];
+        [self addChild:background];
     }
     return self;
 }

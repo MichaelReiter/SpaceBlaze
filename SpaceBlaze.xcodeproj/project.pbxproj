@@ -23,6 +23,8 @@
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
 		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
+		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
+		4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
 		4CADDB4E1A8AC7AA00CDF812 /* InstructionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsScene.h; sourceTree = "<group>"; };
 		4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
+		4CC4F4E51A9501E80070614D /* star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = star.sks; sourceTree = "<group>"; };
+		4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GALACTIC VANGUARDIAN NCV.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		4C11933F1A89C34C0009DDD3 /* SpaceBlaze */ = {
 			isa = PBXGroup;
 			children = (
+				4CC4F4E71A95065E0070614D /* font */,
 				4C797D7F1A8AB03000FEE1EE /* Particles */,
 				4C797D7E1A8AB00700FEE1EE /* Other source files */,
 				4C797D7D1A8AAFED00FEE1EE /* Scenes */,
@@ -169,6 +174,7 @@
 		4C797D7F1A8AB03000FEE1EE /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				4CC4F4E51A9501E80070614D /* star.sks */,
 				4C0D2CFA1A8C4D00001DB954 /* enemyParticle.sks */,
 				4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */,
 				4C11936C1A89CEC50009DDD3 /* spark.png */,
@@ -176,6 +182,14 @@
 				4C797D741A8AA5F900FEE1EE /* Explosion.sks */,
 			);
 			name = Particles;
+			sourceTree = "<group>";
+		};
+		4CC4F4E71A95065E0070614D /* font */ = {
+			isa = PBXGroup;
+			children = (
+				4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */,
+			);
+			name = font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +275,9 @@
 			files = (
 				4C11936E1A89CEC50009DDD3 /* spark.png in Resources */,
 				4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */,
+				4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */,
 				4C1193561A89C34C0009DDD3 /* LaunchScreen.xib in Resources */,
+				4CC4F4E61A9501E80070614D /* star.sks in Resources */,
 				4C797D771A8AA5F900FEE1EE /* spark.png in Resources */,
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
@@ -414,6 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -426,6 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

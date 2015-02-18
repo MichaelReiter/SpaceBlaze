@@ -16,9 +16,6 @@
 - (instancetype)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
-        
-        
-        //TODO: fix high score saving
         if (![[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
             NSLog(@"init hs to 0");
             [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"highScore"];
@@ -27,13 +24,10 @@
         
         self.highScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"];
         
-        /*
-        SKEmitterNode *background = [SKEmitterNode ball_emitterNamed:@"Background"];
+        SKEmitterNode *background = [SKEmitterNode ball_emitterNamed:@"BlazeParticle"];
         background.particlePositionRange = CGVectorMake(self.size.width*2, self.size.height*2);
-        [background advanceSimulationTime:10];
-        
+        [background advanceSimulationTime:100];
         [self addChild:background];
-        */
         
         SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
         highScoreLabel.text = [NSString stringWithFormat:@"High Score: %d", (int)self.highScore];
@@ -56,7 +50,6 @@
         playButton.fontColor = [SKColor whiteColor];
         playButton.name = @"playButton";
         [self addChild:playButton];
-        //TODO: tap the play button to start a new game
         
         SKLabelNode *instructionsButton = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
         instructionsButton.text = @"Instructions";
@@ -65,8 +58,6 @@
         instructionsButton.fontColor = [SKColor whiteColor];
         instructionsButton.name = @"instructionsButton";
         [self addChild:instructionsButton];
-        //TODO: tap the instructions button to see the instructions scene
-        
     }
     return self;
 }
@@ -93,7 +84,7 @@
 - (void)viewInstructions
 {
     InstructionsScene *instructionsScene = [[InstructionsScene alloc] initWithSize:self.size];
-    [self.view presentScene:instructionsScene transition:[SKTransition moveInWithDirection:SKTransitionDirectionRight duration:0.5]];
+    [self.view presentScene:instructionsScene transition:[SKTransition doorsOpenVerticalWithDuration:0.5]];
 }
 
 @end

@@ -16,9 +16,6 @@
 {
     [super viewDidLoad];
     
-    [[NSUserDefaults standardUserDefaults] setValue:0 forKey:@"highScore"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
     // Configure the view.
     SKView * skView = (SKView *)self.view;
     skView.showsFPS = NO;

@@ -100,14 +100,14 @@ enum {
 - (void)updateScore
 {
     if (!_scoreLabel) {
-        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         _scoreLabel.fontSize = 25;
         _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.9);
         _scoreLabel.fontColor = [SKColor whiteColor];
-        _scoreLabel.text = @"Score: 0";
+        _scoreLabel.text = @"0";
         [self addChild:_scoreLabel];
     }
-    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", (int)_enemies.count];
+    _scoreLabel.text = [NSString stringWithFormat:@"%d", (int)_enemies.count];
 }
 
 - (void)update:(NSTimeInterval)currentTime

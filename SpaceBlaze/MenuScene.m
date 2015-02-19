@@ -29,31 +29,31 @@
         [background advanceSimulationTime:100];
         [self addChild:background];
         
-        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
-        highScoreLabel.text = [NSString stringWithFormat:@"High Score: %d", (int)self.highScore];
-        highScoreLabel.fontSize = 20;
+        SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
+        highScoreLabel.text = [NSString stringWithFormat:@"High Score %d", (int)self.highScore];
+        highScoreLabel.fontSize = 18;
         highScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.03);
         highScoreLabel.fontColor = [SKColor whiteColor];
         [self addChild:highScoreLabel];
         
-        SKLabelNode *title = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *title = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         title.text = @"Space Blaze";
-        title.fontSize = 50;
+        title.fontSize = 40;
         title.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.6);
         title.fontColor = [SKColor whiteColor];
         [self addChild:title];
         
-        SKLabelNode *playButton = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *playButton = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         playButton.text = @"Play";
-        playButton.fontSize = 30;
+        playButton.fontSize = 25;
         playButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.3);
         playButton.fontColor = [SKColor whiteColor];
         playButton.name = @"playButton";
         [self addChild:playButton];
         
-        SKLabelNode *instructionsButton = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *instructionsButton = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         instructionsButton.text = @"Instructions";
-        instructionsButton.fontSize = 30;
+        instructionsButton.fontSize = 25;
         instructionsButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.2);
         instructionsButton.fontColor = [SKColor whiteColor];
         instructionsButton.name = @"instructionsButton";

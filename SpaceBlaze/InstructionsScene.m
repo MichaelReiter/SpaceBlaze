@@ -20,42 +20,42 @@
         [background advanceSimulationTime:100];
         [self addChild:background];
         
-        SKLabelNode *instructionsHeaderLabel = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *instructionsHeaderLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         instructionsHeaderLabel.text = @"Instructions";
-        instructionsHeaderLabel.fontSize = 30;
+        instructionsHeaderLabel.fontSize = 25;
         instructionsHeaderLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.85);
         instructionsHeaderLabel.fontColor = [SKColor whiteColor];
         [self addChild:instructionsHeaderLabel];
         
-        SKLabelNode *instructionsLabel1 = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *instructionsLabel1 = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         instructionsLabel1.text = @"Dodge the comets to stay alive.";
-        instructionsLabel1.fontSize = 20;
+        instructionsLabel1.fontSize = 15;
         instructionsLabel1.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.65);
         instructionsLabel1.fontColor = [SKColor whiteColor];
         [self addChild:instructionsLabel1];
         
-        SKLabelNode *instructionsLabel2 = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *instructionsLabel2 = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         instructionsLabel2.text = @"Drag your finger to move.";
-        instructionsLabel2.fontSize = 20;
+        instructionsLabel2.fontSize = 15;
         instructionsLabel2.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.55);
         instructionsLabel2.fontColor = [SKColor whiteColor];
         [self addChild:instructionsLabel2];
         
-        SKLabelNode *instructionsLabel3 = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
-        instructionsLabel3.text = @"Achieve a high score!";
-        instructionsLabel3.fontSize = 20;
+        SKLabelNode *instructionsLabel3 = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
+        instructionsLabel3.text = @"Survive as long as possible.";
+        instructionsLabel3.fontSize = 15;
         instructionsLabel3.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.45);
         instructionsLabel3.fontColor = [SKColor whiteColor];
         [self addChild:instructionsLabel3];
         
-        SKLabelNode *instructionsLabel4 = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
-        instructionsLabel4.text = @"How long can you survive?";
-        instructionsLabel4.fontSize = 20;
+        SKLabelNode *instructionsLabel4 = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
+        instructionsLabel4.text = @"Achieve a high score.";
+        instructionsLabel4.fontSize = 15;
         instructionsLabel4.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.35);
         instructionsLabel4.fontColor = [SKColor whiteColor];
         [self addChild:instructionsLabel4];
         
-        SKLabelNode *backButton = [SKLabelNode labelNodeWithFontNamed:@"AvenirNext"];
+        SKLabelNode *backButton = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         backButton.text = @"Back";
         backButton.fontSize = 20;
         backButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.15);

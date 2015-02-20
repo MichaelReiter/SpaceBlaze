@@ -26,7 +26,6 @@
 		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
 		4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */; };
 		4CC8F2401A96731500DA3060 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F23F1A96731500DA3060 /* explosion.mp3 */; };
-		4CCC24261A96AE8B0051D5D0 /* spawn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */; };
 		4CCC24281A96AF2C0051D5D0 /* comet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CCC24271A96AF2C0051D5D0 /* comet.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 		4CC4F4E51A9501E80070614D /* star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = star.sks; sourceTree = "<group>"; };
 		4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GALACTIC VANGUARDIAN NCV.ttf"; sourceTree = "<group>"; };
 		4CC8F23F1A96731500DA3060 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
-		4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spawn.mp3; sourceTree = "<group>"; };
 		4CCC24271A96AF2C0051D5D0 /* comet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = comet.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,7 +202,6 @@
 				4CCC24271A96AF2C0051D5D0 /* comet.mp3 */,
 				4C12F79F1A9681CB004F6366 /* whoosh.mp3 */,
 				4CC8F23F1A96731500DA3060 /* explosion.mp3 */,
-				4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
 				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
-				4CCC24261A96AE8B0051D5D0 /* spawn.mp3 in Resources */,
 				4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */,
 				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
 				4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */,
@@ -450,7 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -463,7 +459,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

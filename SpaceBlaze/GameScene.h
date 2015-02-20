@@ -12,7 +12,15 @@
 
 @property (strong, nonatomic) SKNode *player;
 
+- (void)dieFrom:(SKNode*)killingEnemy;
+
 - (void)saveHighScoreWithScore:(NSInteger)score;
+
+- (void)updateScore;
+
+- (void)spawnEnemy;
+
+- (void)cleanUpChildrenAndRemove:(SKNode*)node;
 
 @end
 

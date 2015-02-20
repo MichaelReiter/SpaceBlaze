@@ -158,9 +158,10 @@ enum {
         [SKAction waitForDuration:1.2],
         
         [SKAction runBlock:^{
-        [self saveHighScoreWithScore:(int)_enemies.count];
-        MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
-        [self.view presentScene:menu transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:0.5]];
+            [self cleanUpChildrenAndRemove:self];
+            [self saveHighScoreWithScore:(int)_enemies.count];
+            MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
+            [self.view presentScene:menu transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:0.5]];
         }]
     ]]];
     [self runAction:[SKAction sequence:@[
@@ -186,11 +187,20 @@ enum {
     [_player runAction:[SKAction moveTo:[[touches anyObject] locationInNode:self] duration:0.1]];
 }
 
+//credit to iZabala from Stack Overflow for this one. Saved me from a bug that took hours to fix!
+- (void)cleanUpChildrenAndRemove:(SKNode*)node
+{
+    for (SKNode *child in node.children) {
+        [self cleanUpChildrenAndRemove:child];
+    }
+    [node removeFromParent];
+}
+
 @end
 
 @implementation SKEmitterNode (fromFile)
 
-+(instancetype)ball_emitterNamed:(NSString*)name
++ (instancetype)ball_emitterNamed:(NSString*)name
 {
     return [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:name ofType:@"sks"]];
 }

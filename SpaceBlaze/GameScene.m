@@ -68,7 +68,7 @@ enum {
 
 - (void)didMoveToView:(SKView *)view
 {
-    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:1];
+    [self performSelector:@selector(spawnEnemy) withObject:nil afterDelay:1.5];
 }
 
 - (void)spawnEnemy
@@ -88,10 +88,11 @@ enum {
         
         [_enemies addObject:enemy];
         [self addChild:enemy];
+        [self runAction:[SKAction playSoundFileNamed:@"comet.mp3" waitForCompletion:NO]];
         [self updateScore];
 
         [self runAction:[SKAction sequence:@[
-            [SKAction waitForDuration:5],
+            [SKAction waitForDuration:2],
             [SKAction performSelector:@selector(spawnEnemy) onTarget:self]
             ]]];
     }
@@ -144,6 +145,7 @@ enum {
     [self addChild:explosion];
     
     [explosion runAction:[SKAction sequence:@[
+        [SKAction playSoundFileNamed:@"explosion.mp3" waitForCompletion:NO],
         [SKAction waitForDuration:0.2],
         [SKAction runBlock:^{
             [killingEnemy removeFromParent];
@@ -160,6 +162,10 @@ enum {
         MenuScene *menu = [[MenuScene alloc] initWithSize:self.size];
         [self.view presentScene:menu transition:[SKTransition moveInWithDirection:SKTransitionDirectionUp duration:0.5]];
         }]
+    ]]];
+    [self runAction:[SKAction sequence:@[
+        [SKAction waitForDuration:1.2],
+        [SKAction playSoundFileNamed:@"whoosh.mp3" waitForCompletion:NO]
     ]]];
 }
 

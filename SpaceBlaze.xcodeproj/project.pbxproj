@@ -18,13 +18,16 @@
 		4C1193621A89C34D0009DDD3 /* SpaceBlazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */; };
 		4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */; };
 		4C11936E1A89CEC50009DDD3 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C11936C1A89CEC50009DDD3 /* spark.png */; };
+		4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C12F79F1A9681CB004F6366 /* whoosh.mp3 */; };
 		4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D741A8AA5F900FEE1EE /* Explosion.sks */; };
-		4C797D771A8AA5F900FEE1EE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D751A8AA5F900FEE1EE /* spark.png */; };
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
 		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
 		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
 		4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */; };
+		4CC8F2401A96731500DA3060 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CC8F23F1A96731500DA3060 /* explosion.mp3 */; };
+		4CCC24261A96AE8B0051D5D0 /* spawn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */; };
+		4CCC24281A96AF2C0051D5D0 /* comet.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4CCC24271A96AF2C0051D5D0 /* comet.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +59,8 @@
 		4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceBlazeTests.m; sourceTree = "<group>"; };
 		4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = BlazeParticle.sks; path = ../BlazeParticle.sks; sourceTree = "<group>"; };
 		4C11936C1A89CEC50009DDD3 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = ../spark.png; sourceTree = "<group>"; };
+		4C12F79F1A9681CB004F6366 /* whoosh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whoosh.mp3; sourceTree = "<group>"; };
 		4C797D741A8AA5F900FEE1EE /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
-		4C797D751A8AA5F900FEE1EE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		4C797D781A8AAF8800FEE1EE /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
@@ -66,6 +69,9 @@
 		4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
 		4CC4F4E51A9501E80070614D /* star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = star.sks; sourceTree = "<group>"; };
 		4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GALACTIC VANGUARDIAN NCV.ttf"; sourceTree = "<group>"; };
+		4CC8F23F1A96731500DA3060 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spawn.mp3; sourceTree = "<group>"; };
+		4CCC24271A96AF2C0051D5D0 /* comet.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = comet.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +116,10 @@
 				4CC4F4E71A95065E0070614D /* font */,
 				4C797D7F1A8AB03000FEE1EE /* Particles */,
 				4C797D7E1A8AB00700FEE1EE /* Other source files */,
-				4C797D7D1A8AAFED00FEE1EE /* Scenes */,
+				4CC8F2411A96734A00DA3060 /* Audio */,
 				4C1193521A89C34C0009DDD3 /* Images.xcassets */,
 				4C1193541A89C34C0009DDD3 /* LaunchScreen.xib */,
+				4C797D7D1A8AAFED00FEE1EE /* Scenes */,
 				4C1193401A89C34C0009DDD3 /* Supporting Files */,
 			);
 			path = SpaceBlaze;
@@ -178,7 +185,6 @@
 				4C0D2CFA1A8C4D00001DB954 /* enemyParticle.sks */,
 				4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */,
 				4C11936C1A89CEC50009DDD3 /* spark.png */,
-				4C797D751A8AA5F900FEE1EE /* spark.png */,
 				4C797D741A8AA5F900FEE1EE /* Explosion.sks */,
 			);
 			name = Particles;
@@ -190,6 +196,17 @@
 				4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */,
 			);
 			name = font;
+			sourceTree = "<group>";
+		};
+		4CC8F2411A96734A00DA3060 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4CCC24271A96AF2C0051D5D0 /* comet.mp3 */,
+				4C12F79F1A9681CB004F6366 /* whoosh.mp3 */,
+				4CC8F23F1A96731500DA3060 /* explosion.mp3 */,
+				4CCC24251A96AE8B0051D5D0 /* spawn.mp3 */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,12 +293,15 @@
 				4C11936E1A89CEC50009DDD3 /* spark.png in Resources */,
 				4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */,
 				4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */,
+				4CCC24281A96AF2C0051D5D0 /* comet.mp3 in Resources */,
 				4C1193561A89C34C0009DDD3 /* LaunchScreen.xib in Resources */,
 				4CC4F4E61A9501E80070614D /* star.sks in Resources */,
-				4C797D771A8AA5F900FEE1EE /* spark.png in Resources */,
+				4CC8F2401A96731500DA3060 /* explosion.mp3 in Resources */,
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
 				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
+				4CCC24261A96AE8B0051D5D0 /* spawn.mp3 in Resources */,
+				4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */,
 				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
 				4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */,
 			);

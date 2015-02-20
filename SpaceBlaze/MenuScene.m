@@ -78,6 +78,7 @@
 - (void)startGame
 {
     GameScene *newGame = [[GameScene alloc] initWithSize:self.size];
+    [self runAction:[SKAction playSoundFileNamed:@"whoosh.mp3" waitForCompletion:NO]];
     [self.view presentScene:newGame transition:[SKTransition moveInWithDirection:SKTransitionDirectionDown duration:0.5]];
 }
 

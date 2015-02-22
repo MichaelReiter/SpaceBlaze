@@ -33,12 +33,12 @@
         }
         
         self.highScore = [[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"];
-        
+
         SKEmitterNode *background = [SKEmitterNode ball_emitterNamed:@"BlazeParticle"];
         background.particlePositionRange = CGVectorMake(self.size.width * 2, self.size.height * 2);
         [background advanceSimulationTime:10];
         [self addChild:background];
-        
+         
         SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         highScoreLabel.text = [NSString stringWithFormat:@"High Score %d", (int)self.highScore];
         highScoreLabel.fontSize = fontSize/2;

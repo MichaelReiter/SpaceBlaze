@@ -101,8 +101,19 @@ enum {
 - (void)updateScore
 {
     if (!_scoreLabel) {
+        int fontSize;
+        if (self.frame.size.width < 330) {          //iPhone 4S, 5, 5S
+            fontSize = 30;
+        } else if (self.frame.size.width < 380) {   //iPhone 6
+            fontSize = 33;
+        } else if (self.frame.size.width < 420) {   //iPhone 6 Plus
+            fontSize = 38;
+        } else {                                    //iPad
+            fontSize = 45;
+        }
+        
         _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
-        _scoreLabel.fontSize = 25;
+        _scoreLabel.fontSize = fontSize;
         _scoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.9);
         _scoreLabel.fontColor = [SKColor whiteColor];
         _scoreLabel.text = @"0";

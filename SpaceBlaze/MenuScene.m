@@ -16,8 +16,18 @@
 - (instancetype)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
+        int fontSize;
+        if (self.frame.size.width < 330) {          //iPhone 4S, 5, 5S
+            fontSize = 38;
+        } else if (self.frame.size.width < 380) {   //iPhone 6
+            fontSize = 45;
+        } else if (self.frame.size.width < 420) {   //iPhone 6 Plus
+            fontSize = 50;
+        } else {                                    //iPad
+            fontSize = 65;
+        }
+        
         if (![[NSUserDefaults standardUserDefaults] integerForKey:@"highScore"]) {
-            NSLog(@"init hs to 0");
             [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"highScore"];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
@@ -31,30 +41,30 @@
         
         SKLabelNode *highScoreLabel = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         highScoreLabel.text = [NSString stringWithFormat:@"High Score %d", (int)self.highScore];
-        highScoreLabel.fontSize = 18;
+        highScoreLabel.fontSize = fontSize/2;
         highScoreLabel.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.03);
         highScoreLabel.fontColor = [SKColor whiteColor];
         [self addChild:highScoreLabel];
         
         SKLabelNode *title = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         title.text = @"Space Blaze";
-        title.fontSize = 40;
+        title.fontSize = fontSize;
         title.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.6);
         title.fontColor = [SKColor whiteColor];
         [self addChild:title];
         
         SKLabelNode *playButton = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         playButton.text = @"Play";
-        playButton.fontSize = 25;
-        playButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.3);
+        playButton.fontSize = fontSize * 0.65;
+        playButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.31);
         playButton.fontColor = [SKColor whiteColor];
         playButton.name = @"playButton";
         [self addChild:playButton];
         
         SKLabelNode *instructionsButton = [SKLabelNode labelNodeWithFontNamed:@"GALACTICVANGUARDIANNCV"];
         instructionsButton.text = @"Instructions";
-        instructionsButton.fontSize = 25;
-        instructionsButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.2);
+        instructionsButton.fontSize = fontSize * 0.65;
+        instructionsButton.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height * 0.19);
         instructionsButton.fontColor = [SKColor whiteColor];
         instructionsButton.name = @"instructionsButton";
         [self addChild:instructionsButton];

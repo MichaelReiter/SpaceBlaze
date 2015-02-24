@@ -84,7 +84,18 @@ enum {
         enemy.physicsBody.categoryBitMask = CollisionEnemy;
         enemy.physicsBody.allowsRotation = NO;
         enemy.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:6];
-        enemy.position = CGPointMake(arc4random_uniform(self.frame.size.width), arc4random_uniform(self.frame.size.height));
+        
+        int enemyX = arc4random_uniform(self.frame.size.width);
+        int enemyY = arc4random_uniform(self.frame.size.height);
+        
+        //spawn enemies at a minimum distance from the player
+        while (sqrtf((enemyX - _player.position.x) * (enemyX - _player.position.x) + (enemyY - _player.position.y) * (enemyY - _player.position.y)) < 200) {
+            enemyX = arc4random_uniform(self.frame.size.width);
+            enemyY = arc4random_uniform(self.frame.size.height);
+        }
+        
+        NSLog(@"%f", sqrtf((enemyX - _player.position.x) * (enemyX - _player.position.x) + (enemyY - _player.position.y) * (enemyY - _player.position.y)));
+        enemy.position = CGPointMake(enemyX, enemyY);
         
         [_enemies addObject:enemy];
         [self addChild:enemy];

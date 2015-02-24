@@ -21,6 +21,7 @@
 		4C797D761A8AA5F900FEE1EE /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D741A8AA5F900FEE1EE /* Explosion.sks */; };
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
+		4C7D124A1A9C3ECE00650C60 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D12491A9C3ECE00650C60 /* music.mp3 */; };
 		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
 		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
 		4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */; };
@@ -61,6 +62,7 @@
 		4C797D781A8AAF8800FEE1EE /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
 		4C797D7A1A8AAFE000FEE1EE /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
 		4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
+		4C7D12491A9C3ECE00650C60 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
 		4CADDB4E1A8AC7AA00CDF812 /* InstructionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsScene.h; sourceTree = "<group>"; };
 		4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				4CCC24271A96AF2C0051D5D0 /* comet.mp3 */,
 				4C12F79F1A9681CB004F6366 /* whoosh.mp3 */,
 				4CC8F23F1A96731500DA3060 /* explosion.mp3 */,
+				4C7D12491A9C3ECE00650C60 /* music.mp3 */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
 				4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */,
 				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
+				4C7D124A1A9C3ECE00650C60 /* music.mp3 in Resources */,
 				4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

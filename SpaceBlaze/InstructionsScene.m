@@ -80,6 +80,7 @@
 - (void)backToMenu
 {
     MenuScene *menuScene = [[MenuScene alloc] initWithSize:self.size];
+    [self runAction:[SKAction playSoundFileNamed:@"whoosh.mp3" waitForCompletion:NO]];
     [self.view presentScene:menuScene transition:[SKTransition doorsCloseVerticalWithDuration:0.5]];
 }
 

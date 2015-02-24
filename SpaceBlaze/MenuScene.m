@@ -16,6 +16,10 @@
 - (instancetype)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
+        
+        //TODO: loop music 
+        [self runAction:[SKAction playSoundFileNamed:@"music.mp3" waitForCompletion:NO]];
+        
         int fontSize;
         if (self.frame.size.width < 330) {          //iPhone 4S, 5, 5S
             fontSize = 38;
@@ -95,6 +99,8 @@
 - (void)viewInstructions
 {
     InstructionsScene *instructionsScene = [[InstructionsScene alloc] initWithSize:self.size];
+    //Play instructions sound
+    [self runAction:[SKAction playSoundFileNamed:@"whoosh.mp3" waitForCompletion:NO]];
     [self.view presentScene:instructionsScene transition:[SKTransition doorsOpenVerticalWithDuration:0.5]];
 }
 

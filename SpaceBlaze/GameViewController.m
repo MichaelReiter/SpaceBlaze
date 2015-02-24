@@ -25,6 +25,7 @@
     
     // Create and configure the scene.
     MenuScene *scene = [MenuScene sceneWithSize:skView.bounds.size];
+    
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.

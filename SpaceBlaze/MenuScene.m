@@ -16,10 +16,7 @@
 - (instancetype)initWithSize:(CGSize)size
 {
     if (self = [super initWithSize:size]) {
-        
-        //TODO: loop music 
-        [self runAction:[SKAction playSoundFileNamed:@"music.mp3" waitForCompletion:NO]];
-        
+
         int fontSize;
         if (self.frame.size.width < 330) {          //iPhone 4S, 5, 5S
             fontSize = 38;

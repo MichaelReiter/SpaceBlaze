@@ -7,10 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface MenuScene : SKScene
 
 @property NSInteger highScore;
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 - (void)startGame;
 

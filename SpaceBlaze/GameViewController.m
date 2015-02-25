@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 #import "MenuScene.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation GameViewController
 
@@ -25,11 +26,19 @@
     
     // Create and configure the scene.
     MenuScene *scene = [MenuScene sceneWithSize:skView.bounds.size];
-    
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
     [skView presentScene:scene];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"music" ofType:@"mp3"];
+        NSURL *url = [NSURL fileURLWithPath:path];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        self.audioPlayer.numberOfLoops = -1;
+        [self.audioPlayer prepareToPlay];
+        [self.audioPlayer play];
+    });
 }
 
 - (NSUInteger)supportedInterfaceOrientations

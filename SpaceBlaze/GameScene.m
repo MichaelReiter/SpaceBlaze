@@ -94,7 +94,6 @@ enum {
             enemyY = arc4random_uniform(self.frame.size.height);
         }
         
-        NSLog(@"%f", sqrtf((enemyX - _player.position.x) * (enemyX - _player.position.x) + (enemyY - _player.position.y) * (enemyY - _player.position.y)));
         enemy.position = CGPointMake(enemyX, enemyY);
         
         [_enemies addObject:enemy];

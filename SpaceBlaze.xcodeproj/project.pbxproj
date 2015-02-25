@@ -12,7 +12,6 @@
 		4C1193461A89C34C0009DDD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193451A89C34C0009DDD3 /* AppDelegate.m */; };
 		4C1193491A89C34C0009DDD3 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193481A89C34C0009DDD3 /* GameScene.m */; };
 		4C11934E1A89C34C0009DDD3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C11934D1A89C34C0009DDD3 /* GameViewController.m */; };
-		4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C11934F1A89C34C0009DDD3 /* Main.storyboard */; };
 		4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1193521A89C34C0009DDD3 /* Images.xcassets */; };
 		4C1193621A89C34D0009DDD3 /* SpaceBlazeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1193611A89C34D0009DDD3 /* SpaceBlazeTests.m */; };
 		4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C11936B1A89CEC50009DDD3 /* BlazeParticle.sks */; };
@@ -22,6 +21,7 @@
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
 		4C7D124A1A9C3ECE00650C60 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D12491A9C3ECE00650C60 /* music.mp3 */; };
+		4CA3A94B1A9D40F0005B9C28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA3A94A1A9D40F0005B9C28 /* AVFoundation.framework */; };
 		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
 		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
 		4CC4F4E91A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E81A9506E10070614D /* GALACTIC VANGUARDIAN NCV.ttf */; };
@@ -64,6 +64,7 @@
 		4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
 		4C7D12491A9C3ECE00650C60 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		4C84C1F51A8A97FC00D34283 /* CGVector+TC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGVector+TC.h"; sourceTree = "<group>"; };
+		4CA3A94A1A9D40F0005B9C28 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4CADDB4E1A8AC7AA00CDF812 /* InstructionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstructionsScene.h; sourceTree = "<group>"; };
 		4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstructionsScene.m; sourceTree = "<group>"; };
 		4CC4F4E51A9501E80070614D /* star.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = star.sks; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA3A94B1A9D40F0005B9C28 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +95,7 @@
 		4C1193341A89C34C0009DDD3 = {
 			isa = PBXGroup;
 			children = (
+				4CA3A94A1A9D40F0005B9C28 /* AVFoundation.framework */,
 				4C11933F1A89C34C0009DDD3 /* SpaceBlaze */,
 				4C11935E1A89C34D0009DDD3 /* SpaceBlazeTests */,
 				4C11933E1A89C34C0009DDD3 /* Products */,
@@ -295,7 +298,6 @@
 				4CC8F2401A96731500DA3060 /* explosion.mp3 in Resources */,
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
-				4C1193511A89C34C0009DDD3 /* Main.storyboard in Resources */,
 				4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */,
 				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
 				4C7D124A1A9C3ECE00650C60 /* music.mp3 in Resources */,

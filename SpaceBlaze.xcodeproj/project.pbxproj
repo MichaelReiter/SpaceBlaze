@@ -21,6 +21,7 @@
 		4C797D791A8AAF8800FEE1EE /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4C797D781A8AAF8800FEE1EE /* MenuScene.sks */; };
 		4C797D7C1A8AAFE000FEE1EE /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C797D7B1A8AAFE000FEE1EE /* MenuScene.m */; };
 		4C7D124A1A9C3ECE00650C60 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C7D12491A9C3ECE00650C60 /* music.mp3 */; };
+		4C9798671A9D74200011A0CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C11934F1A89C34C0009DDD3 /* Main.storyboard */; };
 		4CA3A94B1A9D40F0005B9C28 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA3A94A1A9D40F0005B9C28 /* AVFoundation.framework */; };
 		4CADDB501A8AC7AA00CDF812 /* InstructionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CADDB4F1A8AC7AA00CDF812 /* InstructionsScene.m */; };
 		4CC4F4E61A9501E80070614D /* star.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4CC4F4E51A9501E80070614D /* star.sks */; };
@@ -297,6 +298,7 @@
 				4CC4F4E61A9501E80070614D /* star.sks in Resources */,
 				4CC8F2401A96731500DA3060 /* explosion.mp3 in Resources */,
 				4C1193531A89C34C0009DDD3 /* Images.xcassets in Resources */,
+				4C9798671A9D74200011A0CB /* Main.storyboard in Resources */,
 				4C11936D1A89CEC50009DDD3 /* BlazeParticle.sks in Resources */,
 				4C12F7A01A9681CB004F6366 /* whoosh.mp3 in Resources */,
 				4C0D2CFB1A8C4D00001DB954 /* enemyParticle.sks in Resources */,
@@ -440,10 +442,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -454,10 +458,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SpaceBlaze/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
